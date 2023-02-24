@@ -1,0 +1,35 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro mat[10][10], n, i, j, maior
+
+		escreva("Qual a ordem da matriz? ")
+		leia(n)
+
+		para(i = 0; i < n; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elemento [", i, ", ", j, "]:")
+				leia(mat[i][j])
+			}
+		}
+
+		escreva("MAIOR ELEMENTO DE CADA LINHA: \n")
+		para(i = 0; i < n; i++)
+		{
+			maior = mat[i][0]
+			para(j = 1; j < n; j++)
+			{
+				se(mat[i][j] > maior)
+				{
+					maior = mat[i][j]
+				}
+			}
+			escreva(maior, "\n2")
+		}
+		
+	}
+}
