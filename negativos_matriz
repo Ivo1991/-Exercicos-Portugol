@@ -1,0 +1,33 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro mat[10][10], m, n, j, i
+
+		escreva("Qual a quantidade de linhas da matriz? ")
+		leia(m)
+		escreva("Qual a quantidade de colunas da matriz? ")
+		leia(n)
+
+		para(i = 0; i < m; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elemento [",i ,", ", j, "]:")
+				leia(mat[i][j])
+			}
+		}
+
+		para(i = 0; i < m; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				se(mat[i][j] < 0)
+				{
+					escreva(mat[i][j], "\n")
+				}
+			}
+		}
+	}
+}
