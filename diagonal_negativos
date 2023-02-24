@@ -1,0 +1,39 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro mat[10][10], n, i, j, qteNegativo
+
+		escreva("Qual a ordem da matriz? ")
+		leia(n)
+
+		para(i = 0; i < n; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elemento [", i,", ", j,"]: ")
+				leia(mat[i][j])
+			}
+		}
+
+		escreva("DIAGONAL PRINCIPAL: \n")
+		para(i =0; i < n; i++)
+		{
+			escreva(mat[i][i], " ")	
+		}
+
+		qteNegativo = 0
+		para(i = 0; i < n; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				se(mat[i][j] < 0)
+				{
+					qteNegativo = qteNegativo + 1
+				}
+			}
+		}
+		escreva("\nQUANTIDADE DE NEGATIVOS = ", qteNegativo)
+	}
+}
