@@ -1,0 +1,28 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro vet[30], i
+		real n, x, soma, media
+
+		escreva("Quantos nummeros voce vai digitar? ")
+		leia(n)
+		soma = 0.0
+		media = 0.0
+		para(i = 0; i < n; i++)
+		{
+			escreva("Digite um numero: ")
+					leia(vet[i])
+						soma = soma + vet[i]
+							media = media + vet[i] / n
+		}
+		escreva("VALORES = ")
+		para(i = 0; i < n; i ++)
+		{
+			escreva(" ", vet[i])
+		}
+		escreva("\nSOMA = ", soma)
+		escreva("\nMÉDIA = ", media)
+				
+	}
+}
