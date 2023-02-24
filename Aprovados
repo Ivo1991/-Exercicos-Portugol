@@ -1,0 +1,31 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro n, i 
+		cadeia nome[10]
+		real nota1[10], nota2[10], media
+
+		escreva("Quantas alunos serao digitados? ")
+		leia(n)
+
+		para(i = 0; i < n; i++)
+		{
+			escreva("Digite nome, primeira e segunda nota", i+1, "º aluno\n")
+			leia(nome[i])
+			leia(nota1[i])
+			leia(nota2[i])
+		}
+
+		escreva("Alunos Aprovados: \n")
+		para(i = 0; i < n; i++)
+		{
+			media = (nota1[i] + nota2[i]) / 2
+			se(media >= 6.0)
+			{
+				escreva(nome[i], "\n")
+			}
+		}
+	}
+}
