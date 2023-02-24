@@ -1,0 +1,37 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro n, m, i, j
+		real mat[10][10], vet[10]
+
+		escreva("Qual a quantidade de linhas da matriz? ")
+		leia(n)
+		escreva("Qual a quantidade de colunas da matriz? ")
+		leia(m)
+
+		para(i = 0; i < n; i++)
+		{
+			escreva("Digite os elementos da ", i+1, "a. Linha:\n")
+			para(j = 0; j < m; j++)
+			{
+				leia(mat[i][j])
+			}
+		}
+
+		vet[i] = 0.0
+		para(i = 0; i < n; i++)
+		{
+			para(j = 0; j < m; j++)
+			{
+				vet[i] = vet[i] + mat[i][j]
+			}
+		}
+
+		para(i = 0; i < n; i++)
+		{
+			escreva(vet[i], "\n")
+		}
+	}
+}
