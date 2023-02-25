@@ -1,0 +1,45 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro A[10][10], B[10][10], C[10][10], m, n, j, i
+
+		escreva("Quantas linhas vai ter a matriz? ")
+		leia(m)
+		escreva("Quantas colunas vai ter a matriz? ")
+		leia(n)
+
+		escreva("Digite os valores da matriz A:\n")
+		para(i = 0; i < m; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elementos [", i,",", j,"]:")
+				leia(A[i][j]) 
+			}
+		}
+
+		escreva("Digite os valores da matriz B:\n")
+		para(i = 0; i < m; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elemento [", i,",", j,"]:")
+				leia(B[i][j])
+			}
+		}
+
+		escreva("MATRIZ SOMA: \n")
+		para(i = 0; i < m; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				C[i][j] = A[i][j] + B[i][j]
+				escreva(C[i][j], " ")
+			}
+			escreva("\n")
+		}
+		
+	}
+}
