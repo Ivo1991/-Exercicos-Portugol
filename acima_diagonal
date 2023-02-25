@@ -1,0 +1,30 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro mat[10][10], n, i, j, soma
+
+		escreva("Qual a ordem da matriz? ")
+		leia(n)
+
+		para(i = 0; i < n; i++)
+		{
+			para(j = 0; j < n; j++)
+			{
+				escreva("Elemento [", i,",", j,"]:")
+				leia(mat[i][j])
+			}
+		}
+
+		soma = 0
+		para(i = 0; i < n; i++)
+		{
+			para(j = i+1; j < n; j++)
+			{
+				soma = soma + mat[i][j]
+			}
+		}
+		escreva("SOMA DOS ELEMENTOS ACIMA DA DIAGONAL PRINCIPAL = ", soma)
+	}
+}
